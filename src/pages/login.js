@@ -13,8 +13,8 @@ export default function Login() {
   const [error, setError] = useState("");
   const isInvalid = password === "" || emailAddress === "";
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
+  const handleLogin = async (event) => {
+    event.preventDefault();
 
     try {
       await firebase.auth().signInWithEmailAndPassword(emailAddress, password);
